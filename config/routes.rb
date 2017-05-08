@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/' => 'categories#index'
+  get '/categories/:category_id' => 'categories#show', as: 'category'
+  get '/categories/:category_id/items/:id' => 'items#show', as: 'item'
+
+  resources :categories do
+    resources :items
+  end
 end

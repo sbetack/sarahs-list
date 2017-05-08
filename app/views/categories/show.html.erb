@@ -1,0 +1,8 @@
+<h2><%=@category.name%></h2>
+<% @category.items.each do |item| %>
+  <ul>
+    <li class="items">
+      <span class="price">$<%=item.price%></span><span class="name"><%= link_to("#{item.name}", [@category, item])%></span>
+    </li>
+  </ul>
+<% end %>
