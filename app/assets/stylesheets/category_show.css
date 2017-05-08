@@ -1,0 +1,30 @@
+.items {
+  list-style-type: none;
+  padding: 13px;
+  border-bottom: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
+}
+.price {
+  padding-right: 10px;
+  display: inline-block;
+  width: 30px;
+}
+
+.name {
+  margin-left: 10px;
+}
+.category {
+  text-align: center;
+}
+.updated-at{
+  float: right;
+  font-size: .7em;
+}
+.add-item {
+  float: right;
+  padding-right: 3%;
+}
+.all-items {
+  padding-top: 20px;
+}
