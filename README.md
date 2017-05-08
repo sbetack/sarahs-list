@@ -1,3 +1,3 @@
-#Sarah's list
+# Sarah's list
 
 Buy and sell goods!
