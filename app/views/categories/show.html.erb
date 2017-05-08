@@ -1,8 +1,12 @@
-<h2><%=@category.name%></h2>
-<% @category.items.each do |item| %>
-  <ul>
-    <li class="items">
-      <span class="price">$<%=item.price%></span><span class="name"><%= link_to("#{item.name}", [@category, item])%></span>
-    </li>
-  </ul>
-<% end %>
+<h2 class="category">Category: <%=@category.name%></h2>
+<div class="add-item"><%=link_to("+ Add a new item", new_category_item_path)%></div>
+<div class="all-items">
+  <% @category.items.each do |item| %>
+    <ul>
+      <li class="items">
+        <span class="price">$<%=item.price%></span><span class="name"><%= link_to("#{item.name}", [@category, item])%></span>
+        <span class="updated-at"><%=item.updated_at.strftime("%I:%M:%S%p %b %d, %Y")%></span>
+      </li>
+    </ul>
+  <% end %>
+</div>

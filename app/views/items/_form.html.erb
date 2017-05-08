@@ -1,7 +1,12 @@
-<%= form_for @item do |f| %>
+<%= form_for [@category, @item] do |f| %>
   Name: <%= f.text_field :name %><br>
   Price: <%= f.text_field :price %><br>
   Description: <%= f.text_area :description %><br>
 
   <%= f.submit %>
+<% end %>
+<% if @errors %>
+  <% @errors.each do |error|%>
+    <p class="error"><%=error%></p>
+    <%end%>
 <% end %>

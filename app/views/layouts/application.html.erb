@@ -7,7 +7,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <nav class="headers">
+    <li class="header">
+      <%=link_to("Home", categories_path)%>
+    </li>
+  </nav>
+  <h1 class="sarahs-list">Sarah's List</h1>
   <body>
     <%= yield %>
   </body>
