@@ -10,7 +10,7 @@
   <nav class="headers">
     <% if user_logged_in %>
       <li class="header">
-        <%=link_to("Logout", url: logout_path)%>
+        <%=link_to("Logout", logout_path, :method => :delete)%>
       </li>
     <% else %>
       <li class="header">
