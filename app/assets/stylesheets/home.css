@@ -3,9 +3,36 @@
 }
 .sarahs-list{
   padding: 3%;
+  border-bottom: 1px solid #d6d6d6;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 .header {
   list-style-type: none;
   float: right;
-  padding-right: 10%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+.categories {
+  padding: 5%;
+  border: 1px solid black;
+  width: 40%;
+  margin: 0 auto;
+/*  display: inline-block;*/
+}
+.category-list {
+  list-style-type: none;
+}
+
+.category-list li {
+  padding: 3%;
+  border-bottom: 1px solid gray;
+  font-size: 1.2em;
+  padding-left: 5%;
+}
+
+.category-list li a:link {
+  text-decoration: none;
 }

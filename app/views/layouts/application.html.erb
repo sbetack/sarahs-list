@@ -8,6 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <nav class="headers">
+    <% if user_logged_in %>
+      <li class="header">
+        <%=link_to("Logout", logout_path, :method => :delete)%>
+      </li>
+    <% else %>
+      <li class="header">
+        <%=link_to("Login", '/login')%>
+      </li>
+      <li class="header">
+        <%=link_to("Sign Up", '/users/new')%>
+      </li>
+    <% end %>
     <li class="header">
       <%=link_to("Home", categories_path)%>
     </li>
