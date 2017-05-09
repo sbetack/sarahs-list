@@ -7,7 +7,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    p params
     @category = Category.find(params[:category_id])
     @item = Item.new(item_params)
     if @item.save
@@ -46,7 +45,7 @@ class ItemsController < ApplicationController
 
   def find_item_and_category
     @category = Category.find(params[:category_id])
-    @item = Item.find_by(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def item_params
